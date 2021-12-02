@@ -48,6 +48,11 @@ p {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 /*-------------------------------------STUDIO---------------*/
 /*----------------------------HEADER----------------------------*/
 .header {
@@ -106,6 +111,7 @@ p {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #2196f3;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts {
   display: flex;
@@ -120,6 +126,7 @@ p {
 }
 .contacts .icon:hover {
   fill: currentColor;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts .item .link {
   font-weight: 500;
@@ -135,6 +142,7 @@ p {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #2196f3;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*----------------------------HERO----------------------------*/
 .overlay {
@@ -177,6 +185,7 @@ p {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*----------------------------FEATURES----------------------------*/
 
@@ -228,16 +237,15 @@ p {
   color: var(--qualities-text-color);
 }
 /*----------------------------ABOUT----------------------------*/
+
 .about-title {
-  margin-top: 0px;
-  margin-bottom: 0px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
-  text-align: center;
   letter-spacing: 0.03em;
   color: var(--about-title-color);
   margin-bottom: 50px;
+  text-align: center;
 }
 .about .list {
   display: flex;
@@ -252,16 +260,19 @@ p {
   display: block;
   max-width: 100%;
 }
+
 .about .label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  width: 370px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   height: 70px;
   background: rgba(47, 48, 58, 0.8);
-  transform: translateY(-74px);
 }
 .about .title {
-  margin-top: 30px;
-  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -317,6 +328,7 @@ p {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .soc-list {
   display: flex;
@@ -347,6 +359,7 @@ p {
 .soc-list .link:focus {
   background-color: #2196f3;
   color: #ffffff;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*----------------------------CLIENTS----------------------------*/
@@ -375,10 +388,12 @@ p {
   align-items: center;
   justify-content: center;
 }
-.clients .link:hover {
+.clients .link:hover,
+.clients .link:focus {
   color: #2196f3;
   background-color: #ffffff;
   border: 1px solid #2196f3;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients .icon {
   fill: currentColor;
@@ -475,6 +490,7 @@ p {
 .soc-link .link:focus {
   background-color: #2196f3;
   color: #ffffff;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*----------------------------MODAL----------------------------*/
 .backdrop {
@@ -484,8 +500,8 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  transition: opacity 250ms, visibility 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) visibility 250ms
+    cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden .modal {
   transform: scale(1.5) rotate(270deg);
@@ -501,8 +517,7 @@ p {
   top: 50%;
   left: 50%;
   transform: scale(1) rotate(0) translate(-50%, -50%);
-  transition: transform 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close {
   position: absolute;
@@ -565,6 +580,7 @@ p {
   color: #ffffff;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*----------------------------PROJECTS----------------------------*/
 .projects {
@@ -587,6 +603,7 @@ p {
 }
 .projects .item:hover .description-text {
   transform: translateY(0);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects .wrap {
   position: relative;
@@ -603,8 +620,7 @@ p {
   background-color: rgba(33, 150, 243, 0.9);
   height: 101%;
   transform: translateY(100%);
-  transition: transform 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects .feature {
   padding: 20px 24px;
@@ -614,6 +630,7 @@ p {
 .projects .link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects .title {
   font-weight: 700;
